@@ -1,0 +1,29 @@
+<%@page import="Quallect.dto.FoodItems"%>
+<%@page import="java.util.List"%>
+<%@page import="Quallect.dto.CustomerRegister"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%String str=(String)request.getAttribute("msg"); %>
+		<%CustomerRegister customer=(CustomerRegister)request.getAttribute("db"); 
+			   List<FoodItems> result = (List<FoodItems>) request.getAttribute("foodItems");
+		%>
+
+<h1><%=str %></h1>
+<%for(FoodItems food: result) {%>
+ <button><a href="Home?id=<%=food.getId()%>&&customer_id=<%=customer.getId()">Home</a></button>
+
+<%} %>
+<div>
+
+ <button><a href="CustomerLog.jsp">sign Out</a></button>
+ 
+</div>
+</body>
+</html>

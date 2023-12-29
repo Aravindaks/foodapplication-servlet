@@ -1,0 +1,46 @@
+package Quallect.controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import Quallect.dao.CustomerRegisterCrud;
+
+@WebServlet("/proceed")
+public class Proceed extends HttpServlet {
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String price=req.getParameter("price");
+		Cart.total.clear();
+		Cart.food.clear();
+		
+		CustomerRegisterCrud crud=new CustomerRegisterCrud();
+		crud.fetchById(value);
+		
+	}
+}
+@WebServlet("/proceed")
+public class finesh extends HttpServlet {
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String value = req.getParameter("value");
+		
+		Cart.total.clear();
+		Cart.item.clear();
+	
+		UserDao dao=new  UserDao();
+		User user = dao.fetchById(Integer.parseInt(value));
+		user.setItem(null);
+		dao.updateUser(user);
+		req.setAttribute("msg", "sucessfully order is Complete");
+	  RequestDispatcher r=req.getRequestDispatcher("end.jsp");
+	  r.forward(req, resp);
+		
+		
+	}
+
+}

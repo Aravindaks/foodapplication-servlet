@@ -1,0 +1,33 @@
+package Quallect.controller;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import Quallect.dao.CustomerRegisterCrud;
+import Quallect.dto.CustomerRegister;
+@WebServlet("/finish")
+public class Finish extends HttpServlet{
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+String value = req.getParameter("value");
+		
+		Cart.total.clear();
+		Cart.food.clear();
+	
+		CustomerRegisterCrud dao=new  CustomerRegisterCrud();
+		CustomerRegister customer = dao.fetchById(Integer.parseInt(value));
+		customer.setFood(null);
+		CustomerRegister customer1 = dao.update(customer);
+		
+		
+		req.setAttribute("msg", "sucessfully order is Complete");
+	  RequestDispatcher r=req.getRequestDispatcher("end.jsp");
+	  r.forward(req, resp);
+	}
+}

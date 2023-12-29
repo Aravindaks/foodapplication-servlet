@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="&#x0D;&#x0A;&#x09;public static void Count(Double price) {&#x0D;&#x0A;&#x09;&#x09;total.add(price);&#x0D;&#x0A;&#x09;}"/>
+		<list key="findhistory">
+			<item value="&#x0D;&#x0A;&#x09;public static void Count(Double price) {&#x0D;&#x0A;&#x09;&#x09;total.add(price);&#x0D;&#x0A;&#x09;}"/>
+		</list>
+	</section>
+</section>

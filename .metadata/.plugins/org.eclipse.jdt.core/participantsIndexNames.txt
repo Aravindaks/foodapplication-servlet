@@ -1,0 +1,5 @@
+INDEX VERSION 1.134
+D:\QuallectPro\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1206540767.index
+\Quallect\src\main\java
+D:\QuallectPro\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1051821724.index
+\image\src\main\java

@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%String str=(String)request.getAttribute("msg"); %>
+<h1><%=str %></h1>
+<div>
+ <button><a href="MainPageCustomer.jsp">Home</a></button>
+ <button><a href="CustomerLog.jsp">sign Out</a></button>
+ 
+</div>
+</body>
+</html>

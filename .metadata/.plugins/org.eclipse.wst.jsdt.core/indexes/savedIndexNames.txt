@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+D:\QuallectPro\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1785980359.index
+3968671898.index
+2603226949.index
+1878831868.index
+160307029.index
+1310380469.index

@@ -1,0 +1,8 @@
+package Quallect.controller;
+
+import javax.servlet.annotation.WebServlet;
+
+@WebServlet("/AfterCart")
+public class AfterCart {
+
+}
